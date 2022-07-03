@@ -1,6 +1,6 @@
 import './styles/App.scss'
 import React, { useState } from 'react'
-import NameList from './components/NameList'
+import TodoList from './components/TodoList'
 import InputField from './components/InputField'
 import { Todo } from './model'
 
@@ -24,7 +24,7 @@ const App: React.FC = () => {
       <span className="heading">Taskify</span>
       <InputField todo={todo} setTodo={setTodo} handleAdd={handleAdd} />
       {todos.map(t => <li key={t.id}>{t.todo}</li>)}
-      <NameList />
+      <TodoList />
     </div>
   )
 }

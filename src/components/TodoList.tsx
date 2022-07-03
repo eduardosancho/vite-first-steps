@@ -1,7 +1,7 @@
 import input from '../db/people.json';
 import React from 'react';
 
-const NameList: React.FC = () => {
+const TodoList: React.FC = () => {
   const { people } = input;
 
   const displayNames = () => {
@@ -18,4 +18,4 @@ const NameList: React.FC = () => {
   )
 }
 
-export default NameList
+export default TodoList
