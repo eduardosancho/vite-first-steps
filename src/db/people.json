@@ -1,0 +1,19 @@
+{
+  "people": [
+    {
+      "first": "abel",
+      "last": "lincoln",
+      "age": 15
+    },
+    {
+      "first": "tom",
+      "last": "jefferson",
+      "age": 16
+    },
+    {
+      "first": "george",
+      "last": "washington",
+      "age": 19
+    }
+  ]
+}
