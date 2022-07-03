@@ -2,6 +2,7 @@ import input from '../db/people.json';
 import React from 'react';
 import { Todo } from '../model';
 import '../styles/TodoList.scss'
+import TodoCard from './TodoCard';
 
 interface Props {
   todos: Todo[];
@@ -18,7 +19,14 @@ const TodoList: React.FC<Props> = ({ todos, setTodos }) => {
   return (
     <>
       <div className="todos">
-        {todos.map(todo => <li>{todo.todo}</li>)}
+        {todos.map(todo => (
+          <TodoCard
+            todo={todo}
+            key={todo.id}
+            todos={todos}
+            setTodos={setTodos}
+          />
+        ))}
       </div>
       <div className="names">
         <h1>Names List</h1>

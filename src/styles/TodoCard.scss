@@ -1,0 +1,32 @@
+.todos__card {
+  display: flex;
+  width: 29.5%;
+  border-radius: 5px;
+  padding: 20px;
+  margin-top: 15px;
+  background-image: url('https://img.freepik.com/vector-gratis/fondo-naranja-abstracto-lineas-efecto-semitono_1017-32107.jpg');
+
+  &--text {
+    flex: 1;
+    padding: 5px;
+    border: none;
+    font-size: 20px;
+
+    &:focus {
+      background-color: red;
+      outline: none;
+    }
+  }
+
+  .icon {
+    margin-left: 10px;
+    font-size: 25px;
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 768px) {
+  .todos__card {
+    width: 100%;
+  }
+}
