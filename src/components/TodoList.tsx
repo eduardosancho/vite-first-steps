@@ -1,7 +1,14 @@
 import input from '../db/people.json';
 import React from 'react';
+import { Todo } from '../model';
+import '../styles/TodoList.scss'
 
-const TodoList: React.FC = () => {
+interface Props {
+  todos: Todo[];
+  setTodos: React.Dispatch<React.SetStateAction<Todo[]>>;
+}
+
+const TodoList: React.FC<Props> = ({ todos, setTodos }) => {
   const { people } = input;
 
   const displayNames = () => {
@@ -9,12 +16,17 @@ const TodoList: React.FC = () => {
   }
 
   return (
-    <div className="names-list">
-      <h1>List of names</h1>
-      <ul>
-        {displayNames()}
-      </ul>
-    </div>
+    <>
+      <div className="todos">
+        {todos.map(todo => <li>{todo.todo}</li>)}
+      </div>
+      <div className="names">
+        <h1>Names List</h1>
+        <ul>
+          {displayNames()}
+        </ul>
+      </div>
+    </>
   )
 }
 
